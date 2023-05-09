@@ -11,5 +11,10 @@ namespace ConsoleMonGame
         int health;
         int energy;
         string name;
+        
+        public void TakeDamage(int damage)
+            {
+                this.health -= damage;
+            }
     }
 }
