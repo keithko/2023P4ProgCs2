@@ -8,13 +8,17 @@ namespace ConsoleMonGame
 {
     internal class ConsoleMon
     {
-        int health;
-        int energy;
-        string name;
+        internal int  health;
+        internal int energy;
+        internal string name;
         
-        public void TakeDamage(int damage)
+        internal void TakeDamage(int damage)
             {
                 this.health -= damage;
             }
+        internal void DepleteEnergy(int energy)
+        {
+            this.energy -= energy;
+        }
     }
 }
