@@ -1,4 +1,5 @@
 ﻿using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleMonGame
 {
@@ -9,6 +10,13 @@ namespace ConsoleMonGame
             Console.WriteLine("Hello, me!");
             Program.TestConsoleMonFunctions();
             Program.TestSkillFunctions();
+            Colors myMainThemeColors = Colors.blue ;
+
+            if (myMainThemeColors == Colors.blue) 
+            {
+                Console.WriteLine("dat is mijn kleur!");
+            }
+            
         }
         static void TestConsoleMonFunctions()
         {
@@ -34,7 +42,7 @@ namespace ConsoleMonGame
             };
             skill.UseOn(targetMon, casterMon);
 
-            Console.WriteLine(targetMon.health == -100);
+            Console.WriteLine(targetMon.health == -150);
 
             Console.WriteLine(casterMon.energy == -20);
         }
