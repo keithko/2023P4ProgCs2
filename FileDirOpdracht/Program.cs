@@ -12,7 +12,7 @@ namespace FileDirOpdracht
             {
                 dir = new DirectoryInfo(@"C:\\Users\\Student\\Desktop\\2023P4ProgCs2");
                 FileInfo[] files = dir.GetFiles();
-
+                 
                 foreach (FileInfo file in files)
                 {
                     Console.WriteLine(file.Name);

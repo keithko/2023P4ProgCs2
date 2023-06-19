@@ -10,6 +10,7 @@ namespace ConsoleMonGame
             Console.WriteLine("Hello, me!");
             Program.TestConsoleMonFunctions();
             Program.TestSkillFunctions();
+            Program.TestFactoryFunctions();
             Colors myMainThemeColors = Colors.blue ;
 
             if (myMainThemeColors == Colors.blue) 
@@ -45,6 +46,12 @@ namespace ConsoleMonGame
             Console.WriteLine(targetMon.health == -150);
 
             Console.WriteLine(casterMon.energy == -20);
+        }
+        static void TestFactoryFunctions()
+        {
+            Console.WriteLine("TestFactoryFunctions");
+            ConsoleMonFactory factory = new ConsoleMonFactory();
+            factory.Load("monsterdata.txt");
         }
 
     }
