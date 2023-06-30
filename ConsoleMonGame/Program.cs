@@ -99,11 +99,12 @@ namespace ConsoleMonGame
             ConsoleMonFactory factory = new ConsoleMonFactory();
             List<ConsoleMon> templates = factory.LoadJson("monsterdata.json");
 
-            Arena arena = new Arena();
+            Arena fight = new Arena();
             ConsoleMon fighterA = templates[0];
+
             ConsoleMon fighterB = templates[1];
 
-            arena.Fight(fighterA, fighterB);
+            Arena.ReferenceEquals(fighterA, fighterB);
             Console.ReadKey();
         }
     }
