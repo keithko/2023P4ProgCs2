@@ -8,15 +8,13 @@ namespace ConsoleMonGame
 {
     internal class  Skill
     {
-        internal int damage;
+        public int damage { get; set; }
 
-        internal int energyCost;
+        public int energyCost { get; set; }
 
-        internal Element element;
+        public Element element { get; set; }
 
-        string name;
-
-        private List<Skill> skills;
+        public string name { get; set; }
     
 
     internal void UseOn(ConsoleMon target, ConsoleMon caster)
@@ -29,6 +27,17 @@ namespace ConsoleMonGame
 
             caster.DepleteEnergy(energyCost);
             target.TakeDamage(damage);
+        }
+    public Skill()
+        {
+            
+        }
+    internal Skill(int damage, int energyCost, Element element, string name)
+        {
+            this.damage = damage;
+            this.energyCost = energyCost;
+            this.element = element;
+            this.name = name;
         }
     }
 }
